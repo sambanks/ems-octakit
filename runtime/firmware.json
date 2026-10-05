@@ -48,8 +48,8 @@
       "size": 606638
     },
     "os": {
-      "sha256": "69460768e2ca85bd155dc838b209bd3fe32ef07625b6b2acf243ec59e63f7255",
-      "size": 1188336
+      "size": 1188412,
+      "sha256": "cc04ab71dbd2577b261be39081894854e9d0ba0d5aad68dba98a5cd6dd7f8566"
     },
     "packed": {
       "sha256": "4e184a5254c0ef874f0250497b611b4fa352843a634a828f3bb46ec92609e0e5",
@@ -62,7 +62,7 @@
   },
   "append": {
     "encoding": "sparse-runtime-local-stock-v1",
-    "length": 75776,
+    "length": 75852,
     "loader": {
       "length": 160,
       "sha256": "14191f7b2246affa762b622f7abec1cd23bc89f0654822f6bdc62b6113c81f9e",
@@ -73,12 +73,12 @@
     "runtime": {
       "load_address": 1171316192,
       "packed": {
-        "sha256": "5a4a5b27a9a9cb5a696a27a0960247e1f4128a4f4f3a39d9c8ad37ab10eeb659",
-        "size": 75612
+        "size": 75688,
+        "sha256": "9bf4b944e2b8de4c40bf8d29aeff6409b30c85b63d181f4327644cdb11da7c86"
       },
       "raw": {
-        "sha256": "695a8c22d3aeaf64ce3b9935410ef859e80e6122b7400f7cb66c7dbb4efcffff",
-        "size": 154766
+        "size": 154878,
+        "sha256": "1d08ca38deda63c164e78107ca03efe71914b542136fd1f627753ff266b5382a"
       },
       "stock_operations": [
         {
@@ -5538,7 +5538,7 @@
       ],
       "target_offset": 164
     },
-    "sha256": "e358f543c786d1b75f0b17424f13c6c204a7245aa92af3073f03f031e6ff944a",
+    "sha256": "9d3b0015db79546ba89c173f9b2f3daf25bb7f883a1c5b7b50f8c94171ac7e7a",
     "stage_header": {
       "length": 4,
       "sha256": "b26ec5b8f2cd76d4eb54db5bb9f273a8e0bfc624150fe09a39316754a4122b05",
@@ -5583,7 +5583,7 @@
       "writes": [
         {
           "offset": 83156,
-          "data": "41f94e00015243f94dd0dde0203c00025c8e12d8538066fa4e754e714e714e71"
+          "data": "41f94e0000e243f94dd0dde0203c00025cfe12d8538066fa4e754e714e714e71"
         },
         {
           "offset": 83189,
@@ -5615,11 +5615,15 @@
       "writes": [
         {
           "offset": 77572,
-          "data": "4eb940002f4441f94ffc7414203c0001275c4eb9400144240c818ba18ab2662a48794e"
+          "data": "4eb940002f4441f94ffc7414203c000127a84eb9400144240c812a50"
+        },
+        {
+          "offset": 77601,
+          "data": "59662a48794e"
         },
         {
           "offset": 77608,
-          "data": "015248794ffc74144eb9400e0aca4fef00084eb9400148d44eb94000f97c4eb9400090284e7560fe"
+          "data": "00e248794ffc74144eb9400e0aca4fef00084eb9400148d44eb94000f97c4eb9400090284e7560fe"
         },
         {
           "offset": 77649,
@@ -5635,7 +5639,7 @@
       "writes": [
         {
           "offset": 81944,
-          "data": "41f94dd0dde0203c00025c8e72002601eb89d28374001418d282538066f00c81798a17c14e75"
+          "data": "41f94dd0dde0203c00025cfe72002601eb89d28374001418d282538066f00c8173aed1e14e75"
         }
       ]
     },
@@ -13927,7 +13931,7 @@
         },
         {
           "offset": 240834,
-          "data": "2f0a2f2afff0487945d33a3a2f024e71"
+          "data": "2f0a2f2afff0487945d33aaa2f024e71"
         }
       ]
     },
@@ -14031,7 +14035,8 @@
     "carried_pattern_ui_lag.S",
     "queue_commit_deferral.S",
     "pattern_kit_paste.S",
-    "persistence.c"
+    "persistence.c",
+    "banks_load_recovery.S"
   ],
   "interface_version": 1,
   "compiler": {
@@ -14084,6 +14089,7 @@
     "audio_selected.S": "3ece31b05aa16d285ae06ef22dde907dd7f2b6c49e4f5286d3cfd84293c572c8",
     "audio_transfers.S": "b8d8b557b0e188300dcf66611cb2548053532f6bef752d3b6cd1965c8d848816",
     "audio_upstream.S": "29b6af4b722125897cb484b54f6a9669382d83063f783400c8a6d6558a310c0b",
+    "banks_load_recovery.S": "d1f70874927bee44ba5c67afa6cfd7a66a35057f0339b7b706d2b003bc6b26cb",
     "carried_pattern_ui_lag.S": "61fecaead8608a549a6a21b4e642394b3f87df5325557109e4877ec9615bf061",
     "clone.S": "3e8d5ed07c420abecec8f3030b828c2bf052b6bf88bbdf451237c4387f3150ff",
     "current_setter.S": "6113f116d3c8b6bef89e9750b32b548e09497b8fe49768d08f2b87ea4033c6a7",
@@ -14117,7 +14123,7 @@
     "pattern_kit_paste.S": "c3647a8339f01be670a7b362ea5baa1354a8ca8ebe14eab22127c49f4ffdfa95",
     "persistence.c": "4c66e13ffd4b02d39c80b278e27731f17211ec32900cfa6d45b6136d30a726bd",
     "persistence_v3_abi.S": "135a976a4c9a1f754184e365666e271cb66e3147b761198584b06609bf959d42",
-    "project_lifecycle.S": "6372c8e897f1b114713c596c007e91434b65bd7c44f5e0e06c45bf8cfa3cd60a",
+    "project_lifecycle.S": "79972e15b397cbc562552316268be0a91e10a884da8742a33b67722bc81ce702",
     "project_load_part_repair.S": "c6546bb0e4564ffe3e352a7e718dd262ed027a1a829bf90bffcf8ce0b7c54856",
     "queue_commit_deferral.S": "6ab618e8d68b69fa3e5e117e1d6362ac3580c9ce5559b189aea0a11962b4508d",
     "randomize_page_operation.S": "1d3ddf410f25835e8d4f1f9edcde5ee1d77f6dd4a3192b456f22169691088a82",

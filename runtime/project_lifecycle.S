@@ -625,9 +625,7 @@ gk_stock_banks_load_work:
         .incbin "stock/0165.bin", 12, 4
         bsr.w   gk_stock_banks_load_work_trampoline
         lea     16(%sp),%sp
-        tst.l   %d0
-        bmi.s   .Lgk_banks_load_return
-        move.l  %d0,-(%sp)
+        jsr     gk_banks_load_recover
         move.l  4(%sp),%d0
         cmpi.l  #GK_STOCK_BANKS_LOAD_PROJECT_RETURN,%d0
         beq.s   .Lgk_banks_load_full_post
